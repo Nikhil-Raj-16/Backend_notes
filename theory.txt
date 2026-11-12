@@ -1,0 +1,78 @@
+server have its own OS, ram, and processor
+
+packages are created by another developers for the use of different users,
+they give a pre defined codes that can be directly run so that we have to code less
+
+packages ka code is saved on npm js website
+
+to use any package in our code so, first we have to go npm js website as code of that package is stored there, and to bring that code to our system is called package installation.
+
+
+Folder Structure
+
+1. node-modules contain the code for all the packages that we are using.
+2. package.json contains the packages that the code is dependent on so making it like a chain.
+3. package-lock.json contains the chain of dependent packages. (we don't need to make changes in this, it auto updates)
+
+how to create a server
+1. write in terminal git init -y creates package.json and we have initiated node.js appn 
+2. to create a server using express package, so install express using npm i express.
+3. now create a file server.js 
+
+
+
+Every application has a different port no e.g mail - 25 , files - 20 , server - 3000
+
+
+
+(req, res) - 
+
+server.js
+------------------------------------------------------
+const express = require('express');
+
+const app = express()   // like function call , server is created , server instance is created
+
+
+app.get("/", (req,res) => {
+
+    res.send("Hello World")
+})
+
+app.get("/about", (req,res) => {
+    res.send("About Page")
+})
+
+
+
+app.listen(3000)   // server is started  , 3000 is port no
+-------------------------------------------------------------------
+
+req - data coming from frontend is recieved and accessed via req in backend.
+res - jo bhi request aaya hai uska response bhejne ke liye req object ka use karte hai. response is sent from backend to frontend.
+
+
+API - do alag alag application ko communicate karne ke liye set of rules / protocol use karte hai usse API kahte hai.
+
+do alag alag application - e.g backend and frontend ka server
+
+Types of API
+REST API- (Representational State Transfer Application Programming Interface)
+It lets different software systems communicate over the web using standard HTTP methods
+
+Common HTTP Methods (CRUD Operations)
+
+• GET: Retrieve a resource (Read), server se data fetch karna ho
+• POST: Create a new resource (Create), server par data send karna ho
+• PUT / PATCH: Update an existing resource (Update), server par data already hai and usko update karna hai
+• DELETE: Remove a resource (Delete), server par data hai usko delete karna hai
+
+
+password of database user HDlkecm9QeJBjmyB
+in a database there is 
+
+CRUD Operations
+
+
+
+mongodb+srv://yt:HDlkecm9QeJBjmyB@yt-backend.4npayom.mongodb.net/
